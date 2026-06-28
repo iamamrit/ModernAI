@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern AI Explorer — Interactive Learning Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/diagrams.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="main-nav" class="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">🧠</span>
+            <span class="brand-text">AI Explorer</span>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#ai-overview" class="nav-link">AI Overview</a></li>
+            <li><a href="#llm" class="nav-link">LLMs</a></li>
+            <li><a href="#models" class="nav-link">Models</a></li>
+            <li><a href="#agents" class="nav-link">AI Agents</a></li>
+            <li><a href="#fine-tuning" class="nav-link">Fine-Tuning</a></li>
+            <li><a href="#rag" class="nav-link">RAG</a></li>
+            <li><a href="#hands-on" class="nav-link">Hands-On</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero-section">
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-line">Understanding</span>
+                <span class="hero-line gradient-text">Modern AI</span>
+                <span class="hero-line">From Basics to Advanced</span>
+            </h1>
+            <p class="hero-subtitle">An interactive journey through Artificial Intelligence, Large Language Models, AI Agents, Fine-Tuning, RAG, and more — with visual diagrams, real examples, and hands-on demos.</p>
+            <div class="hero-cta">
+                <a href="#ai-overview" class="btn btn-primary">Start Learning →</a>
+                <a href="#hands-on" class="btn btn-secondary">Try Interactive Demos</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number" data-target="8">0</span><span class="stat-label">Topics</span></div>
+                <div class="stat"><span class="stat-number" data-target="30">0</span>+<span class="stat-label">Visual Diagrams</span></div>
+                <div class="stat"><span class="stat-number" data-target="50">0</span>+<span class="stat-label">Reference Links</span></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ===== LEARNING PATH ===== -->
+    <section id="learning-path" class="section learning-path-section">
+        <div class="container">
+            <h2 class="section-title">Your Learning Path</h2>
+            <p class="section-subtitle">Follow this roadmap from AI fundamentals to advanced techniques</p>
+            <div class="roadmap">
+                <div class="roadmap-item" data-step="1">
+                    <div class="roadmap-icon">🤖</div>
+                    <h3>AI Fundamentals</h3>
+                    <p>What is AI? Types, history, and core concepts</p>
+                    <a href="#ai-overview" class="roadmap-link">Explore →</a>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item" data-step="2">
+                    <div class="roadmap-icon">📝</div>
+                    <h3>Large Language Models</h3>
+                    <p>How LLMs work, transformers, tokens, and training</p>
+                    <a href="#llm" class="roadmap-link">Explore →</a>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item" data-step="3">
+                    <div class="roadmap-icon">⚖️</div>
+                    <h3>Open vs Closed Models</h3>
+                    <p>Comparing open-source and proprietary AI models</p>
+                    <a href="#models" class="roadmap-link">Explore →</a>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item" data-step="4">
+                    <div class="roadmap-icon">🕵️</div>
+                    <h3>AI Agents</h3>
+                    <p>Autonomous systems that reason, plan, and act</p>
+                    <a href="#agents" class="roadmap-link">Explore →</a>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item" data-step="5">
+                    <div class="roadmap-icon">🔧</div>
+                    <h3>Fine-Tuning</h3>
+                    <p>Customizing models for specific tasks and domains</p>
+                    <a href="#fine-tuning" class="roadmap-link">Explore →</a>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item" data-step="6">
+                    <div class="roadmap-icon">📚</div>
+                    <h3>RAG</h3>
+                    <p>Retrieval-Augmented Generation for grounded AI</p>
+                    <a href="#rag" class="roadmap-link">Explore →</a>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item" data-step="7">
+                    <div class="roadmap-icon">🚀</div>
+                    <h3>Hands-On Labs</h3>
+                    <p>Interactive demos and playground experiments</p>
+                    <a href="#hands-on" class="roadmap-link">Explore →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 1. AI OVERVIEW ===== -->
+    <section id="ai-overview" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Chapter 1</span>
+                <h2 class="section-title">What is Artificial Intelligence?</h2>
+                <p class="section-subtitle">The science of making machines think, learn, and act intelligently</p>
+            </div>
+
+            <!-- AI Definition Card -->
+            <div class="content-card highlight-card">
+                <div class="card-glow"></div>
+                <h3>Definition</h3>
+                <p><strong>Artificial Intelligence (AI)</strong> is a branch of computer science focused on building systems that can perform tasks typically requiring human intelligence — such as understanding language, recognizing images, making decisions, and learning from experience.</p>
+            </div>
+
+            <!-- AI Timeline -->
+            <div class="content-card">
+                <h3>📅 Brief History of AI</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1950</div>
+                        <div class="timeline-content">
+                            <h4>Alan Turing's "Computing Machinery and Intelligence"</h4>
+                            <p>Turing proposes the Turing Test — a benchmark for machine intelligence.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1956</div>
+                        <div class="timeline-content">
+                            <h4>Dartmouth Conference</h4>
+                            <p>The term "Artificial Intelligence" is coined. The field is officially born.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1966</div>
+                        <div class="timeline-content">
+                            <h4>ELIZA Chatbot</h4>
+                            <p>One of the first natural language processing programs created at MIT.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1997</div>
+                        <div class="timeline-content">
+                            <h4>Deep Blue beats Kasparov</h4>
+                            <p>IBM's chess computer defeats the world champion, showcasing computational AI power.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2012</div>
+                        <div class="timeline-content">
+                            <h4>Deep Learning Revolution</h4>
+                            <p>AlexNet wins ImageNet, igniting the deep learning era with neural networks.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017</div>
+                        <div class="timeline-content">
+                            <h4>Transformer Architecture</h4>
+                            <p>Google's "Attention Is All You Need" paper revolutionizes NLP and AI.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content">
+                            <h4>ChatGPT Launch</h4>
+                            <p>OpenAI releases ChatGPT, bringing LLMs to mainstream adoption worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024-26</div>
+                        <div class="timeline-content">
+                            <h4>Agentic AI & Multimodal Models</h4>
+                            <p>AI agents, reasoning models, and multimodal systems become the frontier.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Types of AI Diagram -->
+            <div class="content-card">
+                <h3>🏗️ Types of AI</h3>
+                <div class="ai-types-grid">
+                    <div class="ai-type-card" data-type="narrow">
+                        <div class="ai-type-header narrow">
+                            <h4>Narrow AI (ANI)</h4>
+                            <span class="ai-type-badge current">Current State</span>
+                        </div>
+                        <p>Specialized in one task. Most AI today falls here.</p>
+                        <ul class="examples-list">
+                            <li>ChatGPT / Claude (text generation)</li>
+                            <li>DALL-E / Midjourney (image generation)</li>
+                            <li>Siri / Alexa (voice assistants)</li>
+                            <li>Self-driving car perception systems</li>
+                            <li>Spam filters and recommendation engines</li>
+                        </ul>
+                    </div>
+                    <div class="ai-type-card" data-type="general">
+                        <div class="ai-type-header general">
+                            <h4>General AI (AGI)</h4>
+                            <span class="ai-type-badge future">Theoretical</span>
+                        </div>
+                        <p>Human-level intelligence across all domains.</p>
+                        <ul class="examples-list">
+                            <li>Can learn any intellectual task a human can</li>
+                            <li>Transfer knowledge between domains</li>
+                            <li>Reason abstractly and creatively</li>
+                            <li>Currently does not exist</li>
+                            <li>Active area of research and debate</li>
+                        </ul>
+                    </div>
+                    <div class="ai-type-card" data-type="super">
+                        <div class="ai-type-header super">
+                            <h4>Super AI (ASI)</h4>
+                            <span class="ai-type-badge hypothetical">Hypothetical</span>
+                        </div>
+                        <p>Surpasses all human intelligence combined.</p>
+                        <ul class="examples-list">
+                            <li>Exceeds human cognitive abilities in every way</li>
+                            <li>Could solve currently unsolvable problems</li>
+                            <li>Raises significant ethical and safety concerns</li>
+                            <li>Purely theoretical / science fiction</li>
+                            <li>Topic of AI safety research</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ML Subfields Diagram -->
+            <div class="content-card">
+                <h3>🧩 AI, ML, DL — How They Relate</h3>
+                <div class="nested-circles-diagram">
+                    <div class="circle-outer">
+                        <span class="circle-label">Artificial Intelligence</span>
+                        <div class="circle-mid">
+                            <span class="circle-label">Machine Learning</span>
+                            <div class="circle-inner">
+                                <span class="circle-label">Deep Learning</span>
+                                <div class="circle-core">
+                                    <span class="circle-label">Generative AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circles-legend">
+                        <div class="legend-item"><span class="legend-dot ai"></span><strong>AI</strong> — Any technique enabling machines to mimic human behavior</div>
+                        <div class="legend-item"><span class="legend-dot ml"></span><strong>ML</strong> — Algorithms that learn from data without explicit programming</div>
+                        <div class="legend-item"><span class="legend-dot dl"></span><strong>DL</strong> — Neural networks with many layers (deep neural nets)</div>
+                        <div class="legend-item"><span class="legend-dot genai"></span><strong>GenAI</strong> — Models that generate new content (text, images, code)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ML Types Interactive -->
+            <div class="content-card">
+                <h3>📊 Types of Machine Learning</h3>
+                <div class="tabs" id="mlTabs">
+                    <button class="tab-btn active" data-tab="supervised">Supervised Learning</button>
+                    <button class="tab-btn" data-tab="unsupervised">Unsupervised Learning</button>
+                    <button class="tab-btn" data-tab="reinforcement">Reinforcement Learning</button>
+                    <button class="tab-btn" data-tab="selfsupervised">Self-Supervised Learning</button>
+                </div>
+                <div class="tab-content" id="mlTabContent">
+                    <div class="tab-pane active" id="supervised">
+                        <div class="tab-grid">
+                            <div>
+                                <h4>How it Works</h4>
+                                <p>The model learns from <strong>labeled data</strong> — input-output pairs where the correct answer is provided during training.</p>
+                                <h4>Real-World Examples</h4>
+                                <ul>
+                                    <li><strong>Email spam detection:</strong> trained on emails labeled "spam" or "not spam"</li>
+                                    <li><strong>Medical diagnosis:</strong> X-rays labeled with diseases</li>
+                                    <li><strong>Price prediction:</strong> housing data with known prices</li>
+                                </ul>
+                            </div>
+                            <div class="tab-visual">
+                                <div class="mini-diagram supervised-diagram">
+                                    <div class="mini-box input">Input Data<br><small>(Images, Text)</small></div>
+                                    <div class="mini-arrow">→</div>
+                                    <div class="mini-box model">Model<br><small>(Learns patterns)</small></div>
+                                    <div class="mini-arrow">→</div>
+                                    <div class="mini-box output">Prediction<br><small>(Labels, Values)</small></div>
+                                    <div class="mini-feedback">
+                                        <div class="mini-box labels">Known Labels ↑</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="unsupervised">
+                        <div class="tab-grid">
+                            <div>
+                                <h4>How it Works</h4>
+                                <p>The model finds <strong>hidden patterns</strong> in data without any labels. It discovers structure on its own.</p>
+                                <h4>Real-World Examples</h4>
+                                <ul>
+                                    <li><strong>Customer segmentation:</strong> grouping similar customers for marketing</li>
+                                    <li><strong>Anomaly detection:</strong> finding unusual transactions (fraud)</li>
+                                    <li><strong>Topic modeling:</strong> discovering themes in documents</li>
+                                </ul>
+                            </div>
+                            <div class="tab-visual">
+                                <div class="mini-diagram">
+                                    <div class="mini-box input">Raw Data<br><small>(No labels)</small></div>
+                                    <div class="mini-arrow">→</div>
+                                    <div class="mini-box model">Model<br><small>(Finds patterns)</small></div>
+                                    <div class="mini-arrow">→</div>
+                                    <div class="mini-box output">Clusters<br><small>(Groups, Patterns)</small></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="reinforcement">
+                        <div class="tab-grid">
+                            <div>
+                                <h4>How it Works</h4>
+                                <p>An <strong>agent</strong> learns by interacting with an environment, receiving <strong>rewards or penalties</strong> for its actions.</p>
+                                <h4>Real-World Examples</h4>
+                                <ul>
+                                    <li><strong>Game playing:</strong> AlphaGo defeating Go world champion</li>
+                                    <li><strong>Robotics:</strong> learning to walk and manipulate objects</li>
+                                    <li><strong>RLHF:</strong> training ChatGPT to be helpful using human feedback</li>
+                                </ul>
+                            </div>
+                            <div class="tab-visual">
+                                <div class="mini-diagram">
+                                    <div class="mini-box input">Agent<br><small>(Makes decisions)</small></div>
+                                    <div class="mini-arrow">→ Action →</div>
+                                    <div class="mini-box model">Environment<br><small>(Game, Real world)</small></div>
+                                    <div class="mini-arrow">→ Reward →</div>
+                                    <div class="mini-box output">Updated Policy<br><small>(Better strategy)</small></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="selfsupervised">
+                        <div class="tab-grid">
+                            <div>
+                                <h4>How it Works</h4>
+                                <p>The model creates its own labels from data — e.g., predicting the <strong>next word</strong> in a sentence. This is how most LLMs are trained.</p>
+                                <h4>Real-World Examples</h4>
+                                <ul>
+                                    <li><strong>GPT models:</strong> predict next token in text sequences</li>
+                                    <li><strong>BERT:</strong> fill in masked words in sentences</li>
+                                    <li><strong>CLIP:</strong> learn image-text relationships from web data</li>
+                                </ul>
+                            </div>
+                            <div class="tab-visual">
+                                <div class="mini-diagram">
+                                    <div class="mini-box input">Text Data<br><small>"The cat sat on the _"</small></div>
+                                    <div class="mini-arrow">→</div>
+                                    <div class="mini-box model">Model<br><small>(Predicts missing)</small></div>
+                                    <div class="mini-arrow">→</div>
+                                    <div class="mini-box output">Prediction<br><small>"mat" (97%)</small></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="content-card references-card">
+                <h3>📚 References & Further Reading</h3>
+                <div class="references-grid">
+                    <a href="https://ai.google/education/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🔗</span>
+                        <span>Google AI Education</span>
+                    </a>
+                    <a href="https://www.coursera.org/learn/ai-for-everyone" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🎓</span>
+                        <span>AI for Everyone — Andrew Ng (Coursera)</span>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📖</span>
+                        <span>Wikipedia — Artificial Intelligence</span>
+                    </a>
+                    <a href="https://www.ibm.com/topics/artificial-intelligence" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🏢</span>
+                        <span>IBM — What is AI?</span>
+                    </a>
+                    <a href="https://stanford-cs324.github.io/winter2022/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🏛️</span>
+                        <span>Stanford CS324 — Large Language Models</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 2. LARGE LANGUAGE MODELS ===== -->
+    <section id="llm" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Chapter 2</span>
+                <h2 class="section-title">Large Language Models (LLMs)</h2>
+                <p class="section-subtitle">The engines behind modern AI — understanding how they work</p>
+            </div>
+
+            <div class="content-card highlight-card">
+                <div class="card-glow"></div>
+                <h3>What is an LLM?</h3>
+                <p>A <strong>Large Language Model</strong> is a deep learning model trained on massive amounts of text data. It learns statistical patterns of language to predict, generate, and understand text. Think of it as a powerful autocomplete that has read most of the internet.</p>
+            </div>
+
+            <!-- Transformer Architecture -->
+            <div class="content-card">
+                <h3>⚙️ The Transformer Architecture</h3>
+                <p class="card-intro">At the heart of every modern LLM is the <strong>Transformer</strong>, introduced in the 2017 paper "Attention Is All You Need" by Google.</p>
+                <div class="transformer-diagram">
+                    <div class="transformer-col">
+                        <h4>Key Components</h4>
+                        <div class="transformer-component">
+                            <div class="comp-icon">📥</div>
+                            <div>
+                                <strong>Input Embedding</strong>
+                                <p>Converts words/tokens into numerical vectors the model can process</p>
+                            </div>
+                        </div>
+                        <div class="transformer-component">
+                            <div class="comp-icon">📍</div>
+                            <div>
+                                <strong>Positional Encoding</strong>
+                                <p>Adds position information so the model knows word order</p>
+                            </div>
+                        </div>
+                        <div class="transformer-component">
+                            <div class="comp-icon">👁️</div>
+                            <div>
+                                <strong>Self-Attention</strong>
+                                <p>Allows each word to "look at" every other word to understand context</p>
+                            </div>
+                        </div>
+                        <div class="transformer-component">
+                            <div class="comp-icon">🧮</div>
+                            <div>
+                                <strong>Feed Forward Network</strong>
+                                <p>Processes attention output through neural network layers</p>
+                            </div>
+                        </div>
+                        <div class="transformer-component">
+                            <div class="comp-icon">📤</div>
+                            <div>
+                                <strong>Output Layer</strong>
+                                <p>Produces probability distribution over vocabulary for next token</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transformer-col">
+                        <div class="transformer-visual">
+                            <div class="tv-block tv-input">Input: "How does AI"</div>
+                            <div class="tv-arrow">↓</div>
+                            <div class="tv-block tv-embed">Token Embedding + Position</div>
+                            <div class="tv-arrow">↓</div>
+                            <div class="tv-block-group">
+                                <div class="tv-block tv-attention">Multi-Head Self-Attention</div>
+                                <div class="tv-arrow">↓</div>
+                                <div class="tv-block tv-ffn">Feed Forward Network</div>
+                                <div class="tv-repeat">× N layers (e.g., 96 in GPT-4)</div>
+                            </div>
+                            <div class="tv-arrow">↓</div>
+                            <div class="tv-block tv-output">Output: "work" (probability: 0.82)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attention Mechanism Interactive -->
+            <div class="content-card">
+                <h3>👁️ Self-Attention — The Key Innovation</h3>
+                <p>Self-attention lets each word attend to all others. Click on words to see attention patterns:</p>
+                <div class="attention-demo" id="attentionDemo">
+                    <div class="attention-sentence">
+                        <span class="attention-word" data-idx="0">The</span>
+                        <span class="attention-word" data-idx="1">cat</span>
+                        <span class="attention-word" data-idx="2">sat</span>
+                        <span class="attention-word" data-idx="3">on</span>
+                        <span class="attention-word" data-idx="4">the</span>
+                        <span class="attention-word" data-idx="5">mat</span>
+                        <span class="attention-word" data-idx="6">because</span>
+                        <span class="attention-word" data-idx="7">it</span>
+                        <span class="attention-word" data-idx="8">was</span>
+                        <span class="attention-word" data-idx="9">tired</span>
+                    </div>
+                    <p class="attention-hint">👆 Click any word to see what it "attends to" (which other words help determine its meaning)</p>
+                    <div class="attention-result" id="attentionResult"></div>
+                </div>
+            </div>
+
+            <!-- Tokenization Interactive -->
+            <div class="content-card">
+                <h3>🔤 Tokenization — How LLMs Read Text</h3>
+                <p>LLMs don't read words — they read <strong>tokens</strong>. A token can be a word, part of a word, or a character.</p>
+                <div class="tokenizer-demo">
+                    <label for="tokenInput">Type text to see how it's tokenized:</label>
+                    <input type="text" id="tokenInput" class="token-input" placeholder="Type something like: Hello, how are you?" maxlength="200">
+                    <div class="token-output" id="tokenOutput">
+                        <span class="token" style="--hue: 200">Hello</span>
+                        <span class="token" style="--hue: 50">,</span>
+                        <span class="token" style="--hue: 120"> how</span>
+                        <span class="token" style="--hue: 280"> are</span>
+                        <span class="token" style="--hue: 30"> you</span>
+                        <span class="token" style="--hue: 170">?</span>
+                    </div>
+                    <div class="token-stats" id="tokenStats">
+                        <span>Tokens: <strong>6</strong></span>
+                        <span>Characters: <strong>19</strong></span>
+                        <span>Ratio: <strong>3.2 chars/token</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training Process -->
+            <div class="content-card">
+                <h3>🏋️ How LLMs Are Trained</h3>
+                <div class="training-stages">
+                    <div class="stage">
+                        <div class="stage-number">1</div>
+                        <div class="stage-content">
+                            <h4>Pre-Training</h4>
+                            <p>Model is trained on massive text corpus (trillions of tokens from books, websites, code). It learns to predict the next word.</p>
+                            <div class="stage-stats">
+                                <span>📊 Data: 1-15 trillion tokens</span>
+                                <span>💰 Cost: $2M-$100M+</span>
+                                <span>⏱️ Time: weeks-months on thousands of GPUs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">2</div>
+                        <div class="stage-content">
+                            <h4>Supervised Fine-Tuning (SFT)</h4>
+                            <p>Model is trained on high-quality demonstration data — human-written examples of helpful, accurate responses.</p>
+                            <div class="stage-stats">
+                                <span>📊 Data: ~100K examples</span>
+                                <span>🎯 Goal: Teach instruction-following</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage">
+                        <div class="stage-number">3</div>
+                        <div class="stage-content">
+                            <h4>RLHF (Reinforcement Learning from Human Feedback)</h4>
+                            <p>Humans rank model outputs. A reward model is trained on these preferences, then used to improve the LLM via reinforcement learning.</p>
+                            <div class="stage-stats">
+                                <span>👥 Human raters compare outputs</span>
+                                <span>🎯 Goal: Align with human preferences</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Size Chart -->
+            <div class="content-card">
+                <h3>📏 LLM Size Comparison</h3>
+                <p>Model sizes have grown exponentially. Parameters are the learned weights of the model.</p>
+                <div class="chart-container">
+                    <canvas id="modelSizeChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Key Concepts Cards -->
+            <div class="content-card">
+                <h3>💡 Key LLM Concepts</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card" onclick="this.classList.toggle('flipped')">
+                        <div class="concept-front">
+                            <h4>Temperature</h4>
+                            <p>Click to learn more →</p>
+                        </div>
+                        <div class="concept-back">
+                            <p>Controls randomness. <strong>Low (0.0)</strong> = deterministic, factual. <strong>High (1.0+)</strong> = creative, diverse. Like adjusting how "adventurous" the model is.</p>
+                        </div>
+                    </div>
+                    <div class="concept-card" onclick="this.classList.toggle('flipped')">
+                        <div class="concept-front">
+                            <h4>Context Window</h4>
+                            <p>Click to learn more →</p>
+                        </div>
+                        <div class="concept-back">
+                            <p>Maximum input+output tokens. GPT-4 Turbo: 128K tokens. Claude 3: 200K tokens. Gemini 1.5: 1M+ tokens. Larger = more context the model can "remember."</p>
+                        </div>
+                    </div>
+                    <div class="concept-card" onclick="this.classList.toggle('flipped')">
+                        <div class="concept-front">
+                            <h4>Hallucination</h4>
+                            <p>Click to learn more →</p>
+                        </div>
+                        <div class="concept-back">
+                            <p>When LLMs generate plausible-sounding but <strong>incorrect</strong> information. They predict likely text, not truth. This is why RAG and grounding are important.</p>
+                        </div>
+                    </div>
+                    <div class="concept-card" onclick="this.classList.toggle('flipped')">
+                        <div class="concept-front">
+                            <h4>Prompt Engineering</h4>
+                            <p>Click to learn more →</p>
+                        </div>
+                        <div class="concept-back">
+                            <p>The art of crafting inputs to get better outputs. Techniques include: few-shot examples, chain-of-thought, role-playing, and structured prompts.</p>
+                        </div>
+                    </div>
+                    <div class="concept-card" onclick="this.classList.toggle('flipped')">
+                        <div class="concept-front">
+                            <h4>Inference</h4>
+                            <p>Click to learn more →</p>
+                        </div>
+                        <div class="concept-back">
+                            <p>Using a trained model to generate outputs. Training is expensive and rare. Inference happens every time you chat with an AI — it's the production usage.</p>
+                        </div>
+                    </div>
+                    <div class="concept-card" onclick="this.classList.toggle('flipped')">
+                        <div class="concept-front">
+                            <h4>Multimodal</h4>
+                            <p>Click to learn more →</p>
+                        </div>
+                        <div class="concept-back">
+                            <p>Models that handle multiple data types: text + images + audio + video. GPT-4o, Gemini, and Claude 3 are multimodal — they can "see" and "hear."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="content-card references-card">
+                <h3>📚 References & Further Reading</h3>
+                <div class="references-grid">
+                    <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📄</span>
+                        <span>Attention Is All You Need (Original Paper)</span>
+                    </a>
+                    <a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🎨</span>
+                        <span>The Illustrated Transformer — Jay Alammar</span>
+                    </a>
+                    <a href="https://platform.openai.com/docs/guides/text-generation" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📖</span>
+                        <span>OpenAI — Text Generation Guide</span>
+                    </a>
+                    <a href="https://huggingface.co/docs/transformers" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🤗</span>
+                        <span>Hugging Face Transformers Documentation</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🎬</span>
+                        <span>3Blue1Brown — GPT Visual Explanation</span>
+                    </a>
+                    <a href="https://lilianweng.github.io/posts/2023-06-23-agent/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📝</span>
+                        <span>Lilian Weng — LLM Powered Autonomous Agents</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. MODELS — OPEN vs CLOSED ===== -->
+    <section id="models" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Chapter 3</span>
+                <h2 class="section-title">Open Source vs Closed Models</h2>
+                <p class="section-subtitle">Understanding the AI model landscape and choosing the right approach</p>
+            </div>
+
+            <div class="content-card">
+                <h3>⚖️ The Great Divide</h3>
+                <div class="comparison-table">
+                    <div class="comp-header">
+                        <div class="comp-col-header open">🔓 Open Source / Open Weight Models</div>
+                        <div class="comp-col-header feature">Feature</div>
+                        <div class="comp-col-header closed">🔒 Closed / Proprietary Models</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Weights publicly available for download</div>
+                        <div class="comp-cell feature">Model Access</div>
+                        <div class="comp-cell closed">API access only, weights are secret</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Free to use, modify, and deploy</div>
+                        <div class="comp-cell feature">Cost</div>
+                        <div class="comp-cell closed">Pay-per-token / subscription pricing</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Full control — run on your own hardware</div>
+                        <div class="comp-cell feature">Privacy</div>
+                        <div class="comp-cell closed">Data sent to third-party servers</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Can fine-tune and customize freely</div>
+                        <div class="comp-cell feature">Customization</div>
+                        <div class="comp-cell closed">Limited fine-tuning through APIs</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Competitive but often behind frontier</div>
+                        <div class="comp-cell feature">Performance</div>
+                        <div class="comp-cell closed">Often best-in-class capabilities</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Community-driven, rapid innovation</div>
+                        <div class="comp-cell feature">Development</div>
+                        <div class="comp-cell closed">Large teams, significant R&D investment</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Landscape -->
+            <div class="content-card">
+                <h3>🗺️ The AI Model Landscape (2024-2026)</h3>
+                <div class="model-landscape">
+                    <div class="model-category">
+                        <h4 class="model-cat-title open-title">🔓 Open Source / Open Weight</h4>
+                        <div class="model-cards-row">
+                            <div class="model-card-small">
+                                <div class="model-logo">🦙</div>
+                                <h5>Llama 3.1/4</h5>
+                                <span class="model-org">Meta</span>
+                                <span class="model-size">8B-405B params</span>
+                                <p>Meta's flagship open model. Highly capable, commercially usable.</p>
+                            </div>
+                            <div class="model-card-small">
+                                <div class="model-logo">💎</div>
+                                <h5>Mistral / Mixtral</h5>
+                                <span class="model-org">Mistral AI</span>
+                                <span class="model-size">7B-8x22B params</span>
+                                <p>European AI lab. Efficient MoE architecture. Strong performance per size.</p>
+                            </div>
+                            <div class="model-card-small">
+                                <div class="model-logo">🌊</div>
+                                <h5>DeepSeek V3/R1</h5>
+                                <span class="model-org">DeepSeek</span>
+                                <span class="model-size">67B-671B params</span>
+                                <p>Chinese lab. Strong reasoning. Competitive with frontier closed models.</p>
+                            </div>
+                            <div class="model-card-small">
+                                <div class="model-logo">🤗</div>
+                                <h5>Falcon / BLOOM</h5>
+                                <span class="model-org">TII / BigScience</span>
+                                <span class="model-size">7B-180B params</span>
+                                <p>Fully open models with training data transparency.</p>
+                            </div>
+                            <div class="model-card-small">
+                                <div class="model-logo">⚡</div>
+                                <h5>Phi-3/4</h5>
+                                <span class="model-org">Microsoft</span>
+                                <span class="model-size">3.8B-14B params</span>
+                                <p>Small but mighty. Designed for edge and mobile deployment.</p>
+                            </div>
+                            <div class="model-card-small">
+                                <div class="model-logo">💻</div>
+                                <h5>Qwen 2.5</h5>
+                                <span class="model-org">Alibaba</span>
+                                <span class="model-size">0.5B-72B params</span>
+                                <p>Multilingual. Strong coding and math capabilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-category">
+                        <h4 class="model-cat-title closed-title">🔒 Closed / Proprietary</h4>
+                        <div class="model-cards-row">
+                            <div class="model-card-small">
+                                <div class="model-logo">🟢</div>
+                                <h5>GPT-4o / o1 / o3</h5>
+                                <span class="model-org">OpenAI</span>
+                                <span class="model-size">Unknown (rumored 1.8T)</span>
+                                <p>Market leader. Multimodal. o-series adds chain-of-thought reasoning.</p>
+                            </div>
+                            <div class="model-card-small">
+                                <div class="model-logo">🟣</div>
+                                <h5>Claude 3.5 / Opus 4</h5>
+                                <span class="model-org">Anthropic</span>
+                                <span class="model-size">Unknown</span>
+                                <p>Constitutional AI. Excellent at coding, analysis, and long context tasks.</p>
+                            </div>
+                            <div class="model-card-small">
+                                <div class="model-logo">🔵</div>
+                                <h5>Gemini 2.0</h5>
+                                <span class="model-org">Google DeepMind</span>
+                                <span class="model-size">Unknown</span>
+                                <p>Natively multimodal. 1M+ token context. Deep Google integration.</p>
+                            </div>
+                            <div class="model-card-small">
+                                <div class="model-logo">🟠</div>
+                                <h5>Grok</h5>
+                                <span class="model-org">xAI</span>
+                                <span class="model-size">Unknown</span>
+                                <p>Elon Musk's AI. Real-time information. Integrated with X/Twitter.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benchmark Chart -->
+            <div class="content-card">
+                <h3>📊 Model Benchmark Comparison</h3>
+                <p>Performance across common benchmarks (illustrative scores, higher is better):</p>
+                <div class="chart-container">
+                    <canvas id="benchmarkChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Decision Tree -->
+            <div class="content-card">
+                <h3>🤔 Which Model Should You Choose?</h3>
+                <div class="decision-tree" id="decisionTree">
+                    <div class="dt-question active" data-step="q1">
+                        <p>What's your top priority?</p>
+                        <button class="dt-btn" data-next="q2-privacy">🔒 Data Privacy</button>
+                        <button class="dt-btn" data-next="q2-performance">🚀 Best Performance</button>
+                        <button class="dt-btn" data-next="q2-cost">💰 Lowest Cost</button>
+                        <button class="dt-btn" data-next="q2-customize">🔧 Full Customization</button>
+                    </div>
+                    <div class="dt-question" data-step="q2-privacy">
+                        <p>You need <strong>data privacy</strong>. Can you run models on your own servers?</p>
+                        <button class="dt-btn" data-next="r-open-self">Yes, I have GPU infrastructure</button>
+                        <button class="dt-btn" data-next="r-private-cloud">No, I need a hosted solution</button>
+                        <button class="dt-btn dt-back" data-next="q1">← Back</button>
+                    </div>
+                    <div class="dt-question" data-step="q2-performance">
+                        <p>You want <strong>peak performance</strong>. What's your use case?</p>
+                        <button class="dt-btn" data-next="r-frontier">General Intelligence / Reasoning</button>
+                        <button class="dt-btn" data-next="r-coding">Coding / Technical Tasks</button>
+                        <button class="dt-btn" data-next="r-multimodal">Multimodal (Images + Text)</button>
+                        <button class="dt-btn dt-back" data-next="q1">← Back</button>
+                    </div>
+                    <div class="dt-question" data-step="q2-cost">
+                        <p>You want <strong>lowest cost</strong>. What scale are you working at?</p>
+                        <button class="dt-btn" data-next="r-free">Personal / Learning projects</button>
+                        <button class="dt-btn" data-next="r-small-open">Small-medium business</button>
+                        <button class="dt-btn dt-back" data-next="q1">← Back</button>
+                    </div>
+                    <div class="dt-question" data-step="q2-customize">
+                        <p>You want <strong>full customization</strong>. What kind?</p>
+                        <button class="dt-btn" data-next="r-finetune">Fine-tune for specific domain</button>
+                        <button class="dt-btn" data-next="r-rag-rec">Add my own knowledge base (RAG)</button>
+                        <button class="dt-btn dt-back" data-next="q1">← Back</button>
+                    </div>
+                    <!-- Results -->
+                    <div class="dt-result" data-step="r-open-self">
+                        <h4>✅ Recommendation: Self-hosted Open Models</h4>
+                        <p>Use <strong>Llama 3.1 70B</strong> or <strong>Mistral Large</strong> on your own GPU infrastructure. Full privacy, no data leaves your servers. Tools: vLLM, Ollama, or TGI for serving.</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                    <div class="dt-result" data-step="r-private-cloud">
+                        <h4>✅ Recommendation: Private Cloud Deployment</h4>
+                        <p>Use <strong>Azure OpenAI Service</strong> or <strong>AWS Bedrock</strong> with data processing agreements. Or use <strong>Ollama</strong> locally for smaller models (Phi-3, Llama 8B).</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                    <div class="dt-result" data-step="r-frontier">
+                        <h4>✅ Recommendation: Frontier Closed Models</h4>
+                        <p>Use <strong>GPT-4o / o3</strong> or <strong>Claude Opus 4</strong> for the best general reasoning. For math/science, <strong>Gemini 2.0</strong> is strong. DeepSeek R1 (open) is a competitor.</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                    <div class="dt-result" data-step="r-coding">
+                        <h4>✅ Recommendation: Code-Optimized Models</h4>
+                        <p><strong>Claude Opus 4</strong> leads for coding. <strong>GPT-4o</strong> and <strong>DeepSeek Coder</strong> (open) are excellent. For fast completion: <strong>Codestral</strong> (Mistral) or <strong>Qwen Coder</strong>.</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                    <div class="dt-result" data-step="r-multimodal">
+                        <h4>✅ Recommendation: Multimodal Models</h4>
+                        <p><strong>GPT-4o</strong> and <strong>Gemini 2.0</strong> lead in vision+text. For open models: <strong>LLaVA</strong> or <strong>Llama 3.2 Vision</strong>.</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                    <div class="dt-result" data-step="r-free">
+                        <h4>✅ Recommendation: Free & Local Models</h4>
+                        <p>Use <strong>Ollama</strong> to run models locally for free. Try <strong>Llama 3.1 8B</strong>, <strong>Phi-3</strong>, or <strong>Mistral 7B</strong>. For cloud: free tiers of ChatGPT, Claude, or Gemini.</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                    <div class="dt-result" data-step="r-small-open">
+                        <h4>✅ Recommendation: Open Models + Cloud GPUs</h4>
+                        <p>Run <strong>Llama 3.1 70B</strong> or <strong>Mixtral 8x7B</strong> on cloud GPUs (Together AI, Fireworks, Replicate). Much cheaper than closed API pricing at scale.</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                    <div class="dt-result" data-step="r-finetune">
+                        <h4>✅ Recommendation: Fine-tunable Open Models</h4>
+                        <p>Start with <strong>Llama 3.1</strong> or <strong>Mistral</strong>. Use <strong>LoRA/QLoRA</strong> for efficient fine-tuning. Tools: Hugging Face, Axolotl, Unsloth. See the Fine-Tuning chapter below!</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                    <div class="dt-result" data-step="r-rag-rec">
+                        <h4>✅ Recommendation: RAG Pipeline</h4>
+                        <p>Any model works with RAG! Use <strong>LangChain</strong> or <strong>LlamaIndex</strong> with a vector database (Pinecone, Chroma, Weaviate). See the RAG chapter below!</p>
+                        <button class="dt-btn dt-back" data-next="q1">Start Over ↺</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="content-card references-card">
+                <h3>📚 References & Further Reading</h3>
+                <div class="references-grid">
+                    <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🏆</span>
+                        <span>Open LLM Leaderboard — Hugging Face</span>
+                    </a>
+                    <a href="https://lmsys.org/blog/2023-06-22-leaderboard/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📊</span>
+                        <span>Chatbot Arena Leaderboard — LMSYS</span>
+                    </a>
+                    <a href="https://ollama.com/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🦙</span>
+                        <span>Ollama — Run LLMs Locally</span>
+                    </a>
+                    <a href="https://ai.meta.com/llama/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🦙</span>
+                        <span>Meta Llama — Official</span>
+                    </a>
+                    <a href="https://mistral.ai/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">💎</span>
+                        <span>Mistral AI — Official</span>
+                    </a>
+                    <a href="https://artificialanalysis.ai/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📈</span>
+                        <span>Artificial Analysis — LLM Benchmarks & Pricing</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. AI AGENTS ===== -->
+    <section id="agents" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Chapter 4</span>
+                <h2 class="section-title">AI Agents</h2>
+                <p class="section-subtitle">Autonomous systems that perceive, reason, plan, and act</p>
+            </div>
+
+            <div class="content-card highlight-card">
+                <div class="card-glow"></div>
+                <h3>What is an AI Agent?</h3>
+                <p>An <strong>AI Agent</strong> is an autonomous system that uses an LLM as its "brain" to perceive its environment, make decisions, use tools, and take actions to achieve goals — often in multi-step workflows without constant human guidance.</p>
+            </div>
+
+            <!-- Agent Architecture Diagram -->
+            <div class="content-card">
+                <h3>🏗️ Agent Architecture</h3>
+                <div class="agent-arch-diagram">
+                    <div class="agent-core">
+                        <div class="agent-brain">
+                            <h4>🧠 LLM Brain</h4>
+                            <p>Reasoning & Decision Making</p>
+                        </div>
+                        <div class="agent-components">
+                            <div class="agent-comp">
+                                <div class="agent-comp-icon">👁️</div>
+                                <h5>Perception</h5>
+                                <p>User input, environment observation, tool outputs</p>
+                            </div>
+                            <div class="agent-comp">
+                                <div class="agent-comp-icon">🗺️</div>
+                                <h5>Planning</h5>
+                                <p>Break tasks into steps, create strategies</p>
+                            </div>
+                            <div class="agent-comp">
+                                <div class="agent-comp-icon">💾</div>
+                                <h5>Memory</h5>
+                                <p>Short-term (context) + Long-term (vector DB)</p>
+                            </div>
+                            <div class="agent-comp">
+                                <div class="agent-comp-icon">🔧</div>
+                                <h5>Tools</h5>
+                                <p>APIs, code execution, web search, databases</p>
+                            </div>
+                            <div class="agent-comp">
+                                <div class="agent-comp-icon">⚡</div>
+                                <h5>Action</h5>
+                                <p>Execute decisions, interact with world</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Loop Animation -->
+            <div class="content-card">
+                <h3>🔄 The Agent Loop — Think → Act → Observe</h3>
+                <div class="agent-loop-demo" id="agentLoopDemo">
+                    <div class="loop-visual">
+                        <div class="loop-step active" data-loop="think">
+                            <div class="loop-icon">🤔</div>
+                            <h4>Think</h4>
+                            <p>Analyze input, reason about the task, and plan next action</p>
+                        </div>
+                        <div class="loop-arrow">→</div>
+                        <div class="loop-step" data-loop="act">
+                            <div class="loop-icon">⚡</div>
+                            <h4>Act</h4>
+                            <p>Execute a tool call, write code, or generate a response</p>
+                        </div>
+                        <div class="loop-arrow">→</div>
+                        <div class="loop-step" data-loop="observe">
+                            <div class="loop-icon">👁️</div>
+                            <h4>Observe</h4>
+                            <p>Review the result, check if the goal is achieved</p>
+                        </div>
+                        <div class="loop-arrow loop-back">↩</div>
+                    </div>
+                    <button class="btn btn-primary" id="agentLoopBtn">▶ Animate Loop</button>
+                    <div class="loop-example" id="loopExample">
+                        <div class="loop-trace">
+                            <p class="trace-step"><strong>User:</strong> "What's the weather in Tokyo and should I bring an umbrella?"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Types of Agents -->
+            <div class="content-card">
+                <h3>🏷️ Types of AI Agents</h3>
+                <div class="agent-types-grid">
+                    <div class="agent-type">
+                        <h4>🔨 Tool-Using Agents</h4>
+                        <p>Call external APIs and tools to complete tasks.</p>
+                        <div class="agent-example">
+                            <strong>Example:</strong> ChatGPT with plugins — searches the web, runs code, generates images.
+                        </div>
+                        <div class="agent-tools-list">
+                            Tools: Web Search, Code Interpreter, DALL-E, Browser
+                        </div>
+                    </div>
+                    <div class="agent-type">
+                        <h4>🗣️ Conversational Agents</h4>
+                        <p>Multi-turn dialogue with memory and personality.</p>
+                        <div class="agent-example">
+                            <strong>Example:</strong> Customer service bots that remember conversation history and escalate complex issues.
+                        </div>
+                        <div class="agent-tools-list">
+                            Tools: Knowledge Base, CRM, Ticket System
+                        </div>
+                    </div>
+                    <div class="agent-type">
+                        <h4>💻 Coding Agents</h4>
+                        <p>Write, debug, and refactor code autonomously.</p>
+                        <div class="agent-example">
+                            <strong>Example:</strong> GitHub Copilot Agent, Devin, SWE-Agent — can read entire codebases and make multi-file changes.
+                        </div>
+                        <div class="agent-tools-list">
+                            Tools: File System, Terminal, Git, LSP, Tests
+                        </div>
+                    </div>
+                    <div class="agent-type">
+                        <h4>🔬 Research Agents</h4>
+                        <p>Gather, analyze, and synthesize information.</p>
+                        <div class="agent-example">
+                            <strong>Example:</strong> Deep Research by OpenAI / Gemini — autonomously researches topics and writes reports.
+                        </div>
+                        <div class="agent-tools-list">
+                            Tools: Web Search, Document Reader, Citation Manager
+                        </div>
+                    </div>
+                    <div class="agent-type">
+                        <h4>👥 Multi-Agent Systems</h4>
+                        <p>Multiple specialized agents collaborating.</p>
+                        <div class="agent-example">
+                            <strong>Example:</strong> CrewAI, AutoGen — a "team" of agents where one plans, one researches, one writes, one reviews.
+                        </div>
+                        <div class="agent-tools-list">
+                            Tools: Inter-agent communication, Shared memory
+                        </div>
+                    </div>
+                    <div class="agent-type">
+                        <h4>🖥️ Computer-Use Agents</h4>
+                        <p>Control a computer like a human user.</p>
+                        <div class="agent-example">
+                            <strong>Example:</strong> Anthropic's Computer Use, OpenAI Operator — navigate GUIs, click buttons, fill forms.
+                        </div>
+                        <div class="agent-tools-list">
+                            Tools: Screenshot, Mouse, Keyboard, Browser
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Frameworks -->
+            <div class="content-card">
+                <h3>🛠️ Popular Agent Frameworks</h3>
+                <div class="frameworks-grid">
+                    <div class="framework-card">
+                        <h4>🦜 LangChain / LangGraph</h4>
+                        <p>Most popular framework. LangGraph adds stateful, graph-based agent workflows.</p>
+                        <a href="https://langchain.com/" target="_blank" rel="noopener">langchain.com →</a>
+                    </div>
+                    <div class="framework-card">
+                        <h4>🤖 AutoGen (Microsoft)</h4>
+                        <p>Multi-agent conversation framework. Agents debate and collaborate.</p>
+                        <a href="https://microsoft.github.io/autogen/" target="_blank" rel="noopener">autogen docs →</a>
+                    </div>
+                    <div class="framework-card">
+                        <h4>👥 CrewAI</h4>
+                        <p>Role-based multi-agent orchestration. Define agent personas and tasks.</p>
+                        <a href="https://www.crewai.com/" target="_blank" rel="noopener">crewai.com →</a>
+                    </div>
+                    <div class="framework-card">
+                        <h4>🐝 Bee Agent (IBM)</h4>
+                        <p>Production-ready framework focused on reliability and observability.</p>
+                        <a href="https://github.com/i-am-bee/bee-agent-framework" target="_blank" rel="noopener">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="content-card references-card">
+                <h3>📚 References & Further Reading</h3>
+                <div class="references-grid">
+                    <a href="https://lilianweng.github.io/posts/2023-06-23-agent/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📝</span>
+                        <span>LLM Powered Autonomous Agents — Lilian Weng</span>
+                    </a>
+                    <a href="https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🎓</span>
+                        <span>AI Agents in LangGraph — DeepLearning.AI</span>
+                    </a>
+                    <a href="https://docs.anthropic.com/en/docs/agents-and-tools" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🟣</span>
+                        <span>Building Agents — Anthropic Docs</span>
+                    </a>
+                    <a href="https://arxiv.org/abs/2308.11432" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📄</span>
+                        <span>A Survey on LLM-based Autonomous Agents (Paper)</span>
+                    </a>
+                    <a href="https://github.com/e2b-dev/awesome-ai-agents" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">⭐</span>
+                        <span>Awesome AI Agents — Curated List (GitHub)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. FINE-TUNING ===== -->
+    <section id="fine-tuning" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Chapter 5</span>
+                <h2 class="section-title">Fine-Tuning</h2>
+                <p class="section-subtitle">Customizing pre-trained models for your specific needs</p>
+            </div>
+
+            <div class="content-card highlight-card">
+                <div class="card-glow"></div>
+                <h3>What is Fine-Tuning?</h3>
+                <p><strong>Fine-tuning</strong> is the process of taking a pre-trained model and further training it on a smaller, specialized dataset to adapt it for specific tasks, domains, or behaviors. Think of it as teaching a well-educated generalist to become a domain expert.</p>
+            </div>
+
+            <!-- When to Fine-Tune -->
+            <div class="content-card">
+                <h3>🤔 When to Fine-Tune vs Other Approaches</h3>
+                <div class="finetune-spectrum">
+                    <div class="spectrum-item easy">
+                        <h4>1. Prompt Engineering</h4>
+                        <p>Cheapest & fastest. Craft better prompts with examples.</p>
+                        <div class="spectrum-bar"><div class="spectrum-fill" style="width:20%"></div></div>
+                        <span class="spectrum-label">Effort: Low | Cost: Free</span>
+                    </div>
+                    <div class="spectrum-item medium">
+                        <h4>2. RAG (Retrieval-Augmented Generation)</h4>
+                        <p>Add external knowledge without changing the model.</p>
+                        <div class="spectrum-bar"><div class="spectrum-fill" style="width:45%"></div></div>
+                        <span class="spectrum-label">Effort: Medium | Cost: Low</span>
+                    </div>
+                    <div class="spectrum-item hard">
+                        <h4>3. Fine-Tuning</h4>
+                        <p>Modify model weights for specialized behavior.</p>
+                        <div class="spectrum-bar"><div class="spectrum-fill" style="width:75%"></div></div>
+                        <span class="spectrum-label">Effort: High | Cost: Medium-High</span>
+                    </div>
+                    <div class="spectrum-item extreme">
+                        <h4>4. Training from Scratch</h4>
+                        <p>Build entire model. Only for major labs.</p>
+                        <div class="spectrum-bar"><div class="spectrum-fill" style="width:100%"></div></div>
+                        <span class="spectrum-label">Effort: Extreme | Cost: $Millions</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fine-tuning approaches -->
+            <div class="content-card">
+                <h3>🔧 Fine-Tuning Approaches</h3>
+                <div class="tabs" id="ftTabs">
+                    <button class="tab-btn active" data-tab="ft-full">Full Fine-Tuning</button>
+                    <button class="tab-btn" data-tab="ft-lora">LoRA</button>
+                    <button class="tab-btn" data-tab="ft-qlora">QLoRA</button>
+                    <button class="tab-btn" data-tab="ft-rlhf">RLHF / DPO</button>
+                </div>
+                <div class="tab-content" id="ftTabContent">
+                    <div class="tab-pane active" id="ft-full">
+                        <h4>Full Fine-Tuning</h4>
+                        <p>Updates <strong>all</strong> model parameters. Most powerful but most expensive.</p>
+                        <div class="code-block">
+                            <div class="code-header">Conceptual Overview</div>
+                            <pre><code>Pre-trained Model (all params)
+    │
+    ▼  Train on your data
+    │
+Updated Model (all params modified)
+
+• Requires: Full GPU memory (VRAM) for model + gradients + optimizer
+• Llama 70B: ~140GB VRAM minimum (4x A100 80GB)
+• Best for: Large datasets, significant behavior changes</code></pre>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ft-lora">
+                        <h4>LoRA (Low-Rank Adaptation)</h4>
+                        <p>Freezes original weights, trains small "adapter" matrices. <strong>99%+ fewer trainable parameters.</strong></p>
+                        <div class="code-block">
+                            <div class="code-header">How LoRA Works</div>
+                            <pre><code>Original Weight Matrix W (frozen) ─── W × input
+                                        +
+Low-Rank Matrices A×B (trainable) ── (A×B) × input
+
+• Original: 4096×4096 = 16.7M parameters
+• LoRA (rank 8): 4096×8 + 8×4096 = 65K parameters
+• 99.6% parameter reduction!
+• Adapters are tiny (~10-100MB) and swappable</code></pre>
+                        </div>
+                        <div class="code-block">
+                            <div class="code-header">Python Example (Hugging Face PEFT)</div>
+                            <pre><code>from peft import LoraConfig, get_peft_model
+
+lora_config = LoraConfig(
+    r=8,                    # Rank of adapter
+    lora_alpha=16,          # Scaling factor
+    target_modules=["q_proj", "v_proj"],  # Which layers to adapt
+    lora_dropout=0.05,
+    task_type="CAUSAL_LM"
+)
+
+model = get_peft_model(base_model, lora_config)
+model.print_trainable_parameters()
+# Output: trainable params: 4,194,304 || all params: 6,738,415,616 || 0.06%</code></pre>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ft-qlora">
+                        <h4>QLoRA (Quantized LoRA)</h4>
+                        <p>Combines LoRA with 4-bit quantization. Fine-tune a 70B model on a <strong>single GPU</strong>!</p>
+                        <div class="code-block">
+                            <div class="code-header">QLoRA Memory Savings</div>
+                            <pre><code>Model: Llama 2 70B
+
+Full Fine-Tuning:     ~140 GB VRAM (4× A100)
+LoRA (16-bit):         ~70 GB VRAM (2× A100)
+QLoRA (4-bit + LoRA):  ~20 GB VRAM (1× A100 or RTX 4090!)
+
+How: Model weights quantized to 4-bit (NF4)
+     while LoRA adapters train in 16-bit precision</code></pre>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="ft-rlhf">
+                        <h4>RLHF & DPO</h4>
+                        <p>Align models with human preferences using feedback or direct preference optimization.</p>
+                        <div class="code-block">
+                            <div class="code-header">RLHF Pipeline</div>
+                            <pre><code>Step 1: Collect human preference data
+   → Pairs of (prompt, chosen_response, rejected_response)
+
+Step 2 (RLHF): Train a reward model
+   → Then use PPO to optimize the LLM against the reward model
+
+Step 2 (DPO): Skip the reward model
+   → Directly optimize the LLM on preference pairs
+   → Simpler, more stable, increasingly preferred
+
+Tools: trl library (Hugging Face), TRL's DPOTrainer</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fine-tuning Process -->
+            <div class="content-card">
+                <h3>📋 Step-by-Step Fine-Tuning Process</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="process-num">1</div>
+                        <div class="process-content">
+                            <h4>Prepare Your Dataset</h4>
+                            <p>Format your data as instruction-response pairs. Typically need 100-10,000+ high-quality examples.</p>
+                            <div class="code-block">
+                                <div class="code-header">Dataset Format (JSON)</div>
+                                <pre><code>{
+  "instruction": "Summarize this medical report",
+  "input": "Patient presents with acute bronchitis...",
+  "output": "The patient has acute bronchitis with symptoms..."
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-num">2</div>
+                        <div class="process-content">
+                            <h4>Choose Base Model & Approach</h4>
+                            <p>Pick a base model (e.g., Llama 3.1 8B) and PEFT method (LoRA/QLoRA). Consider model size vs. available hardware.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-num">3</div>
+                        <div class="process-content">
+                            <h4>Configure Training</h4>
+                            <p>Set hyperparameters: learning rate (~2e-4), batch size, epochs (1-3), LoRA rank, target modules.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-num">4</div>
+                        <div class="process-content">
+                            <h4>Train & Monitor</h4>
+                            <p>Run training, monitor loss curves. Should see decreasing, smooth loss. Watch for overfitting.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-num">5</div>
+                        <div class="process-content">
+                            <h4>Evaluate & Deploy</h4>
+                            <p>Test on held-out data. Merge LoRA adapters into base model. Deploy using vLLM, TGI, or Ollama.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="content-card references-card">
+                <h3>📚 References & Further Reading</h3>
+                <div class="references-grid">
+                    <a href="https://huggingface.co/docs/peft" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🤗</span>
+                        <span>PEFT — Parameter-Efficient Fine-Tuning (Hugging Face)</span>
+                    </a>
+                    <a href="https://arxiv.org/abs/2106.09685" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📄</span>
+                        <span>LoRA: Low-Rank Adaptation (Original Paper)</span>
+                    </a>
+                    <a href="https://arxiv.org/abs/2305.14314" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📄</span>
+                        <span>QLoRA: Efficient Finetuning (Paper)</span>
+                    </a>
+                    <a href="https://www.deeplearning.ai/short-courses/finetuning-large-language-models/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🎓</span>
+                        <span>Fine-tuning LLMs — DeepLearning.AI</span>
+                    </a>
+                    <a href="https://github.com/OpenAccess-AI-Collective/axolotl" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🪓</span>
+                        <span>Axolotl — Fine-tuning Framework (GitHub)</span>
+                    </a>
+                    <a href="https://unsloth.ai/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🦥</span>
+                        <span>Unsloth — 2x Faster Fine-tuning</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. RAG ===== -->
+    <section id="rag" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Chapter 6</span>
+                <h2 class="section-title">Retrieval-Augmented Generation (RAG)</h2>
+                <p class="section-subtitle">Grounding AI responses in your own data</p>
+            </div>
+
+            <div class="content-card highlight-card">
+                <div class="card-glow"></div>
+                <h3>What is RAG?</h3>
+                <p><strong>Retrieval-Augmented Generation (RAG)</strong> is a technique that enhances LLM responses by first retrieving relevant information from external knowledge bases, then including that context in the prompt. This grounds the AI's answers in factual, up-to-date data — reducing hallucinations and enabling domain-specific knowledge without fine-tuning.</p>
+            </div>
+
+            <!-- RAG Pipeline Diagram -->
+            <div class="content-card">
+                <h3>🔄 How RAG Works — The Pipeline</h3>
+                <div class="rag-pipeline">
+                    <div class="rag-stage">
+                        <div class="rag-stage-header ingestion">📥 Ingestion (Offline)</div>
+                        <div class="rag-flow">
+                            <div class="rag-node">📄 Documents<br><small>PDFs, web pages, DBs, APIs</small></div>
+                            <div class="rag-arrow">→</div>
+                            <div class="rag-node">✂️ Chunking<br><small>Split into passages (512-1024 tokens)</small></div>
+                            <div class="rag-arrow">→</div>
+                            <div class="rag-node">🔢 Embedding<br><small>Convert to vectors</small></div>
+                            <div class="rag-arrow">→</div>
+                            <div class="rag-node">🗄️ Vector DB<br><small>Store embeddings (Pinecone, Chroma)</small></div>
+                        </div>
+                    </div>
+                    <div class="rag-stage">
+                        <div class="rag-stage-header retrieval">🔍 Retrieval (Runtime)</div>
+                        <div class="rag-flow">
+                            <div class="rag-node">❓ User Query<br><small>"How does our refund policy work?"</small></div>
+                            <div class="rag-arrow">→</div>
+                            <div class="rag-node">🔢 Embed Query<br><small>Same embedding model</small></div>
+                            <div class="rag-arrow">→</div>
+                            <div class="rag-node">🔎 Similarity Search<br><small>Find top-K relevant chunks</small></div>
+                            <div class="rag-arrow">→</div>
+                            <div class="rag-node">📋 Retrieved Context<br><small>Top 3-10 relevant passages</small></div>
+                        </div>
+                    </div>
+                    <div class="rag-stage">
+                        <div class="rag-stage-header generation">✨ Generation</div>
+                        <div class="rag-flow">
+                            <div class="rag-node">📋 Context + Query<br><small>Combined into prompt</small></div>
+                            <div class="rag-arrow">→</div>
+                            <div class="rag-node">🧠 LLM<br><small>Generates grounded answer</small></div>
+                            <div class="rag-arrow">→</div>
+                            <div class="rag-node">✅ Answer<br><small>With citations from source docs</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Embeddings Visual -->
+            <div class="content-card">
+                <h3>🔢 Understanding Embeddings</h3>
+                <p>Embeddings convert text into numerical vectors where similar meanings are close together in vector space.</p>
+                <div class="embeddings-visual" id="embeddingsVisual">
+                    <div class="embed-cluster cluster-animals">
+                        <span class="embed-point" style="--x:15%;--y:20%">🐕 dog</span>
+                        <span class="embed-point" style="--x:22%;--y:35%">🐈 cat</span>
+                        <span class="embed-point" style="--x:10%;--y:45%">🐾 puppy</span>
+                        <span class="embed-point" style="--x:28%;--y:25%">🦮 retriever</span>
+                        <span class="embed-label" style="--x:18%;--y:55%">Animals</span>
+                    </div>
+                    <div class="embed-cluster cluster-tech">
+                        <span class="embed-point" style="--x:65%;--y:20%">💻 computer</span>
+                        <span class="embed-point" style="--x:72%;--y:35%">⌨️ keyboard</span>
+                        <span class="embed-point" style="--x:60%;--y:40%">🖥️ monitor</span>
+                        <span class="embed-point" style="--x:78%;--y:25%">🖱️ mouse</span>
+                        <span class="embed-label" style="--x:68%;--y:55%">Technology</span>
+                    </div>
+                    <div class="embed-cluster cluster-food">
+                        <span class="embed-point" style="--x:40%;--y:70%">🍕 pizza</span>
+                        <span class="embed-point" style="--x:48%;--y:80%">🍔 burger</span>
+                        <span class="embed-point" style="--x:35%;--y:85%">🌮 taco</span>
+                        <span class="embed-point" style="--x:55%;--y:75%">🍣 sushi</span>
+                        <span class="embed-label" style="--x:45%;--y:95%">Food</span>
+                    </div>
+                </div>
+                <p class="card-note">In real embeddings, each text becomes a vector of 768-3072 numbers. Similar texts have vectors pointing in similar directions (high cosine similarity).</p>
+            </div>
+
+            <!-- RAG vs Fine-tuning -->
+            <div class="content-card">
+                <h3>⚖️ RAG vs Fine-Tuning — When to Use Which</h3>
+                <div class="comparison-table">
+                    <div class="comp-header">
+                        <div class="comp-col-header open">📚 RAG</div>
+                        <div class="comp-col-header feature">Aspect</div>
+                        <div class="comp-col-header closed">🔧 Fine-Tuning</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Adding new knowledge / data</div>
+                        <div class="comp-cell feature">Best For</div>
+                        <div class="comp-cell closed">Changing model behavior / style</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Switch data sources instantly</div>
+                        <div class="comp-cell feature">Flexibility</div>
+                        <div class="comp-cell closed">Need to retrain for new data</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Low (vector DB + embeddings)</div>
+                        <div class="comp-cell feature">Cost</div>
+                        <div class="comp-cell closed">Medium-High (GPU training)</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Minutes to hours</div>
+                        <div class="comp-cell feature">Setup Time</div>
+                        <div class="comp-cell closed">Hours to days</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">High — sources are citable</div>
+                        <div class="comp-cell feature">Factual Accuracy</div>
+                        <div class="comp-cell closed">Can still hallucinate</div>
+                    </div>
+                    <div class="comp-row">
+                        <div class="comp-cell open">Just update the knowledge base</div>
+                        <div class="comp-cell feature">Data Updates</div>
+                        <div class="comp-cell closed">Requires retraining</div>
+                    </div>
+                </div>
+                <div class="card-note" style="margin-top:1rem">
+                    <strong>💡 Pro Tip:</strong> In practice, RAG and fine-tuning are complementary! Fine-tune for tone/behavior, use RAG for knowledge. Many production systems use both.
+                </div>
+            </div>
+
+            <!-- Advanced RAG -->
+            <div class="content-card">
+                <h3>🚀 Advanced RAG Techniques</h3>
+                <div class="advanced-rag-grid">
+                    <div class="advanced-rag-item">
+                        <h4>Hybrid Search</h4>
+                        <p>Combine vector (semantic) search with keyword (BM25) search for better retrieval.</p>
+                    </div>
+                    <div class="advanced-rag-item">
+                        <h4>Re-ranking</h4>
+                        <p>Use a cross-encoder model to re-rank retrieved chunks by relevance after initial retrieval.</p>
+                    </div>
+                    <div class="advanced-rag-item">
+                        <h4>Multi-Query RAG</h4>
+                        <p>Generate multiple query variations, retrieve for each, then combine results.</p>
+                    </div>
+                    <div class="advanced-rag-item">
+                        <h4>Agentic RAG</h4>
+                        <p>An AI agent that decides when and what to retrieve, can chain multiple searches.</p>
+                    </div>
+                    <div class="advanced-rag-item">
+                        <h4>Graph RAG</h4>
+                        <p>Build a knowledge graph from documents, traverse relationships for richer context.</p>
+                    </div>
+                    <div class="advanced-rag-item">
+                        <h4>Corrective RAG (CRAG)</h4>
+                        <p>Evaluate retrieved docs for relevance, fall back to web search if corpus is insufficient.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RAG Code Example -->
+            <div class="content-card">
+                <h3>💻 Simple RAG Example (Python + LangChain)</h3>
+                <div class="code-block">
+                    <div class="code-header">rag_example.py</div>
+                    <pre><code>from langchain_community.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_community.vectorstores import Chroma
+from langchain.chains import RetrievalQA
+
+# 1. Load and chunk documents
+loader = PyPDFLoader("company_handbook.pdf")
+docs = loader.load()
+
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1000,
+    chunk_overlap=200
+)
+chunks = splitter.split_documents(docs)
+
+# 2. Create embeddings and store in vector DB
+embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+vectorstore = Chroma.from_documents(chunks, embeddings)
+
+# 3. Create retrieval chain
+llm = ChatOpenAI(model="gpt-4o", temperature=0)
+qa_chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    retriever=vectorstore.as_retriever(search_kwargs={"k": 5}),
+    return_source_documents=True
+)
+
+# 4. Ask questions!
+result = qa_chain.invoke({"query": "What is our PTO policy?"})
+print(result["result"])
+print("Sources:", [doc.metadata for doc in result["source_documents"]])</code></pre>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="content-card references-card">
+                <h3>📚 References & Further Reading</h3>
+                <div class="references-grid">
+                    <a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">📄</span>
+                        <span>RAG Original Paper (Lewis et al. 2020)</span>
+                    </a>
+                    <a href="https://python.langchain.com/docs/tutorials/rag/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🦜</span>
+                        <span>LangChain RAG Tutorial</span>
+                    </a>
+                    <a href="https://docs.llamaindex.ai/en/stable/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🦙</span>
+                        <span>LlamaIndex — Data Framework for LLMs</span>
+                    </a>
+                    <a href="https://www.pinecone.io/learn/retrieval-augmented-generation/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🌲</span>
+                        <span>Pinecone — RAG Guide</span>
+                    </a>
+                    <a href="https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🎓</span>
+                        <span>Building Advanced RAG — DeepLearning.AI</span>
+                    </a>
+                    <a href="https://weaviate.io/blog/introduction-to-rag" target="_blank" rel="noopener" class="ref-link">
+                        <span class="ref-icon">🌐</span>
+                        <span>Weaviate — Introduction to RAG</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. HANDS-ON LABS ===== -->
+    <section id="hands-on" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Chapter 7</span>
+                <h2 class="section-title">Interactive Labs & Playground</h2>
+                <p class="section-subtitle">Learn by doing — hands-on experiments to solidify your understanding</p>
+            </div>
+
+            <!-- Temperature Playground -->
+            <div class="content-card">
+                <h3>🌡️ Lab 1: Temperature Experiment</h3>
+                <p>See how temperature affects LLM output. Adjust the slider and generate text:</p>
+                <div class="lab-playground">
+                    <div class="lab-control">
+                        <label for="tempSlider">Temperature: <span id="tempValue">0.7</span></label>
+                        <input type="range" id="tempSlider" min="0" max="2" step="0.1" value="0.7">
+                        <div class="temp-labels">
+                            <span>0.0 (Deterministic)</span>
+                            <span>1.0 (Balanced)</span>
+                            <span>2.0 (Very Creative)</span>
+                        </div>
+                    </div>
+                    <div class="lab-control">
+                        <label for="tempPrompt">Prompt:</label>
+                        <input type="text" id="tempPrompt" class="token-input" value="The future of AI will" readonly>
+                    </div>
+                    <button class="btn btn-primary" id="generateBtn">Generate 3 Completions →</button>
+                    <div class="lab-output" id="tempOutput"></div>
+                </div>
+            </div>
+
+            <!-- Prompt Engineering Lab -->
+            <div class="content-card">
+                <h3>✍️ Lab 2: Prompt Engineering Techniques</h3>
+                <p>Compare different prompting strategies on the same task:</p>
+                <div class="prompt-lab">
+                    <div class="prompt-techniques">
+                        <div class="prompt-technique" data-technique="zero-shot">
+                            <h4>Zero-Shot</h4>
+                            <div class="code-block">
+                                <pre><code>Classify this review as positive or negative:
+"The battery life is amazing but the screen is too dim."</code></pre>
+                            </div>
+                            <div class="prompt-result">
+                                <strong>Response:</strong> "This review is <em>mixed</em> — the reviewer likes the battery but dislikes the screen."
+                                <div class="prompt-quality">⭐⭐⭐ — Works but vague</div>
+                            </div>
+                        </div>
+                        <div class="prompt-technique" data-technique="few-shot">
+                            <h4>Few-Shot (with examples)</h4>
+                            <div class="code-block">
+                                <pre><code>Classify these reviews:
+"Great camera!" → Positive
+"Terrible build quality" → Negative  
+"Good value for money" → Positive
+
+Now classify: "The battery life is amazing but the screen is too dim."</code></pre>
+                            </div>
+                            <div class="prompt-result">
+                                <strong>Response:</strong> "Mixed (Positive for battery, Negative for screen)"
+                                <div class="prompt-quality">⭐⭐⭐⭐ — More structured</div>
+                            </div>
+                        </div>
+                        <div class="prompt-technique" data-technique="cot">
+                            <h4>Chain-of-Thought (CoT)</h4>
+                            <div class="code-block">
+                                <pre><code>Classify this review. Think step by step:
+1) Identify positive aspects
+2) Identify negative aspects  
+3) Weigh overall sentiment
+
+Review: "The battery life is amazing but the screen is too dim."</code></pre>
+                            </div>
+                            <div class="prompt-result">
+                                <strong>Response:</strong> "1) Positive: battery life ('amazing')<br>2) Negative: screen brightness ('too dim')<br>3) Overall: Mixed-Positive (battery praise is stronger than screen criticism)"
+                                <div class="prompt-quality">⭐⭐⭐⭐⭐ — Detailed reasoning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Neural Network Visualizer -->
+            <div class="content-card">
+                <h3>🧠 Lab 3: Neural Network Visualizer</h3>
+                <p>See how data flows through a neural network. Click neurons to activate them and watch signals propagate:</p>
+                <div class="nn-visualizer">
+                    <canvas id="nnCanvas" width="700" height="350"></canvas>
+                    <div class="nn-controls">
+                        <button class="btn btn-primary" id="nnForwardBtn">▶ Forward Pass</button>
+                        <button class="btn btn-secondary" id="nnResetBtn">↺ Reset</button>
+                        <div class="nn-info" id="nnInfo">Click "Forward Pass" to see data flow through the network layers.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Embedding Similarity Calculator -->
+            <div class="content-card">
+                <h3>📐 Lab 4: Embedding Similarity Calculator</h3>
+                <p>Type two sentences and see how similar they are in embedding space (simulated cosine similarity):</p>
+                <div class="similarity-lab">
+                    <div class="sim-inputs">
+                        <div class="sim-input-group">
+                            <label for="simInput1">Sentence A:</label>
+                            <input type="text" id="simInput1" class="token-input" placeholder="The cat sat on the mat" maxlength="200" value="The cat sat on the mat">
+                        </div>
+                        <div class="sim-input-group">
+                            <label for="simInput2">Sentence B:</label>
+                            <input type="text" id="simInput2" class="token-input" placeholder="A dog lay on the rug" maxlength="200" value="A dog lay on the rug">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="simCalcBtn">Calculate Similarity →</button>
+                    <div class="sim-result" id="simResult">
+                        <div class="sim-bar-container">
+                            <div class="sim-bar" id="simBar" style="width: 0%"></div>
+                        </div>
+                        <div class="sim-score" id="simScore"></div>
+                        <div class="sim-explanation" id="simExplanation"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Cost Calculator -->
+            <div class="content-card">
+                <h3>💰 Lab 5: AI API Cost Estimator</h3>
+                <p>Estimate monthly costs for different AI models based on your usage:</p>
+                <div class="cost-lab">
+                    <div class="cost-controls">
+                        <div class="cost-control">
+                            <label for="costModel">Model:</label>
+                            <select id="costModel" class="token-input">
+                                <option value="gpt4o">GPT-4o ($2.50 / $10 per 1M tokens)</option>
+                                <option value="gpt4omini">GPT-4o Mini ($0.15 / $0.60 per 1M tokens)</option>
+                                <option value="claude-opus">Claude Opus 4 ($15 / $75 per 1M tokens)</option>
+                                <option value="claude-sonnet">Claude Sonnet 4 ($3 / $15 per 1M tokens)</option>
+                                <option value="gemini">Gemini 2.0 Pro ($1.25 / $5 per 1M tokens)</option>
+                                <option value="llama-hosted">Llama 3.1 70B (hosted) ($0.60 / $0.80 per 1M)</option>
+                                <option value="llama-local">Llama 3.1 8B (local/Ollama) — FREE</option>
+                            </select>
+                        </div>
+                        <div class="cost-control">
+                            <label for="costRequests">Requests per day: <span id="costReqValue">100</span></label>
+                            <input type="range" id="costRequests" min="10" max="10000" step="10" value="100">
+                        </div>
+                        <div class="cost-control">
+                            <label for="costTokens">Avg tokens per request: <span id="costTokValue">500</span></label>
+                            <input type="range" id="costTokens" min="50" max="5000" step="50" value="500">
+                        </div>
+                    </div>
+                    <div class="cost-result" id="costResult">
+                        <div class="cost-breakdown">
+                            <div class="cost-item">
+                                <span class="cost-label">Input tokens/month:</span>
+                                <span class="cost-value" id="costInputTokens">—</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Output tokens/month:</span>
+                                <span class="cost-value" id="costOutputTokens">—</span>
+                            </div>
+                            <div class="cost-item cost-total">
+                                <span class="cost-label">Estimated monthly cost:</span>
+                                <span class="cost-value" id="costTotal">—</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div class="content-card">
+                <h3>🧪 Lab 6: Test Your Knowledge</h3>
+                <div class="quiz" id="quiz">
+                    <div class="quiz-question active" data-q="1">
+                        <p class="quiz-q">1/6: What architecture powers most modern LLMs?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-correct="false">Recurrent Neural Network (RNN)</button>
+                            <button class="quiz-opt" data-correct="true">Transformer</button>
+                            <button class="quiz-opt" data-correct="false">Convolutional Neural Network (CNN)</button>
+                            <button class="quiz-opt" data-correct="false">Decision Tree</button>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                    <div class="quiz-question" data-q="2">
+                        <p class="quiz-q">2/6: What does RAG stand for?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-correct="false">Random Automated Generation</button>
+                            <button class="quiz-opt" data-correct="false">Recursive Attention Gateway</button>
+                            <button class="quiz-opt" data-correct="true">Retrieval-Augmented Generation</button>
+                            <button class="quiz-opt" data-correct="false">Reinforced Agent Grounding</button>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                    <div class="quiz-question" data-q="3">
+                        <p class="quiz-q">3/6: Which technique reduces fine-tuning parameters by 99%+?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-correct="false">RLHF</button>
+                            <button class="quiz-opt" data-correct="true">LoRA (Low-Rank Adaptation)</button>
+                            <button class="quiz-opt" data-correct="false">Prompt Engineering</button>
+                            <button class="quiz-opt" data-correct="false">Data Augmentation</button>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                    <div class="quiz-question" data-q="4">
+                        <p class="quiz-q">4/6: Which is an open-source model?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-correct="false">GPT-4o</button>
+                            <button class="quiz-opt" data-correct="false">Claude Opus</button>
+                            <button class="quiz-opt" data-correct="true">Llama 3.1</button>
+                            <button class="quiz-opt" data-correct="false">Gemini</button>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                    <div class="quiz-question" data-q="5">
+                        <p class="quiz-q">5/6: In an agent loop, what comes after "Think"?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-correct="false">Observe</button>
+                            <button class="quiz-opt" data-correct="true">Act</button>
+                            <button class="quiz-opt" data-correct="false">Embed</button>
+                            <button class="quiz-opt" data-correct="false">Retrieve</button>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                    <div class="quiz-question" data-q="6">
+                        <p class="quiz-q">6/6: What reduces hallucinations by grounding AI in external data?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-correct="false">Increasing temperature</button>
+                            <button class="quiz-opt" data-correct="false">Using bigger models</button>
+                            <button class="quiz-opt" data-correct="true">RAG (Retrieval-Augmented Generation)</button>
+                            <button class="quiz-opt" data-correct="false">More training data</button>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                    <div class="quiz-score" id="quizScore"></div>
+                </div>
+            </div>
+
+            <!-- Glossary -->
+            <div class="content-card">
+                <h3>📖 AI Glossary</h3>
+                <div class="glossary" id="glossary">
+                    <input type="text" id="glossarySearch" class="token-input" placeholder="Search terms..." maxlength="100">
+                    <div class="glossary-list" id="glossaryList">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🧠 AI Explorer</h4>
+                    <p>An interactive learning platform to understand Modern AI from basics to advanced concepts.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Key Resources</h4>
+                    <ul>
+                        <li><a href="https://huggingface.co/" target="_blank" rel="noopener">Hugging Face</a></li>
+                        <li><a href="https://openai.com/" target="_blank" rel="noopener">OpenAI</a></li>
+                        <li><a href="https://www.anthropic.com/" target="_blank" rel="noopener">Anthropic</a></li>
+                        <li><a href="https://deepmind.google/" target="_blank" rel="noopener">Google DeepMind</a></li>
+                        <li><a href="https://www.deeplearning.ai/" target="_blank" rel="noopener">DeepLearning.AI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Learning Platforms</h4>
+                    <ul>
+                        <li><a href="https://www.coursera.org/browse/data-science/machine-learning" target="_blank" rel="noopener">Coursera — ML Courses</a></li>
+                        <li><a href="https://fast.ai/" target="_blank" rel="noopener">fast.ai — Practical Deep Learning</a></li>
+                        <li><a href="https://karpathy.ai/" target="_blank" rel="noopener">Andrej Karpathy's Courses</a></li>
+                        <li><a href="https://www.youtube.com/@3blue1brown" target="_blank" rel="noopener">3Blue1Brown (YouTube)</a></li>
+                        <li><a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">arXiv — Latest AI Papers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tools & Frameworks</h4>
+                    <ul>
+                        <li><a href="https://langchain.com/" target="_blank" rel="noopener">LangChain</a></li>
+                        <li><a href="https://docs.llamaindex.ai/" target="_blank" rel="noopener">LlamaIndex</a></li>
+                        <li><a href="https://ollama.com/" target="_blank" rel="noopener">Ollama</a></li>
+                        <li><a href="https://www.crewai.com/" target="_blank" rel="noopener">CrewAI</a></li>
+                        <li><a href="https://www.pinecone.io/" target="_blank" rel="noopener">Pinecone</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built for learning purposes. Content is educational and may not reflect the very latest developments.</p>
+                <p>© 2026 AI Explorer — An Interactive AI Learning Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/interactive.js"></script>
+</body>
+</html>
